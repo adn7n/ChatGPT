@@ -1,0 +1,70 @@
+{
+  "project": "WHOOP — Beyond Performance",
+  "providedImages": {
+    "black": {
+      "file": "/media/originals/photo-1.png",
+      "source": "Archive.zip fourni par l’utilisateur",
+      "publicationRightsConfirmed": false
+    },
+    "white": {
+      "file": "/media/originals/photo-2.png",
+      "source": "Archive.zip fourni par l’utilisateur",
+      "publicationRightsConfirmed": false
+    },
+    "pack": {
+      "file": "/media/originals/photo-3.png",
+      "source": "Archive.zip fourni par l’utilisateur",
+      "publicationRightsConfirmed": false
+    }
+  },
+  "requiredFacts": [
+    {
+      "id": "history",
+      "description": "2012, Will Ahmed, cofondateurs et évolution des générations",
+      "verified": false,
+      "sources": []
+    },
+    {
+      "id": "ronaldo",
+      "description": "Cristiano Ronaldo : statut exact auprès de WHOOP",
+      "verified": false,
+      "sources": []
+    },
+    {
+      "id": "bartlett",
+      "description": "Steven Bartlett : statut exact auprès de WHOOP",
+      "verified": false,
+      "sources": []
+    },
+    {
+      "id": "lebron",
+      "description": "LeBron James : lien public avec WHOOP",
+      "verified": false,
+      "sources": []
+    },
+    {
+      "id": "phelps",
+      "description": "Michael Phelps : lien public avec WHOOP",
+      "verified": false,
+      "sources": []
+    },
+    {
+      "id": "mahomes",
+      "description": "Patrick Mahomes : statut exact auprès de WHOOP",
+      "verified": false,
+      "sources": []
+    },
+    {
+      "id": "white-compatibility",
+      "description": "Nom commercial, matière et compatibilité du bracelet blanc",
+      "verified": false,
+      "sources": []
+    },
+    {
+      "id": "offer",
+      "description": "Contenu et validité de l’offre personnelle à 293 CHF",
+      "verified": false,
+      "sources": []
+    }
+  ]
+}
