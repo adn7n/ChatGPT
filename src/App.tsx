@@ -122,20 +122,19 @@ export function App() {
           <h2>Uma intenção pessoal.</h2>
           <p>
             Esta apresentação explica uma intenção de compra. Não promete
-            resultados desportivos, melhorias académicas nem rendimentos
-            financeiros.
+            resultados desportivos nem melhorias académicas.
           </p>
           <p>
-            O orçamento de 293 CHF é uma estimativa fornecida pelo autor. O
-            modelo, os acessórios, a pulseira branca e as condições da oferta
-            estão por confirmar.
+            O total de 293,99 CHF foi transcrito da captura do pedido: 219 CHF
+            de subscrição anual Peak, 48 CHF da SportFlex 5.0 e 26,99 CHF de
+            entrega. O IVA de 22,03 CHF já está incluído. As condições e os
+            preços podem mudar.
           </p>
           <p>
-            As três imagens do produto são as fotografias fornecidas para este
-            projeto. O telemóvel visível no conjunto ilustra a aplicação e não
-            está incluído na compra. Os retratos, a história detalhada e as
-            afirmações de parceria só serão apresentados após verificação das
-            fontes e dos direitos.
+            As imagens do produto provêm das fotografias fornecidas para esta
+            apresentação pessoal. O telemóvel ilustra a aplicação e não está
+            incluído na compra. Na secção de personalidades, distinguimos
+            embaixadores e investidores da marca.
           </p>
           <a href="https://www.whoop.com/" target="_blank" rel="noreferrer">
             Consultar o site oficial da WHOOP ↗

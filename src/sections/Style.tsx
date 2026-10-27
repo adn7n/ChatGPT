@@ -21,7 +21,7 @@ export function Style({ assets }: { assets: Assets }) {
           <Photo
             assets={assets}
             name="white"
-            alt="Pulseira branca escolhida, modelo a confirmar a partir da referência"
+            alt="Pulseira SportFlex 5.0 Charge branca, apresentada na captura do pedido"
             className="white-photo"
           />
         </div>
@@ -33,8 +33,8 @@ export function Style({ assets }: { assets: Assets }) {
             uma nova estética.
           </h3>
           <p>
-            Uma pulseira branca adicional para o meu projeto. O modelo e a
-            compatibilidade serão confirmados a partir da referência escolhida.
+            SportFlex 5.0, na cor Charge. A pulseira branca adicional
+            apresentada no meu pedido, por 48 CHF.
           </p>
         </div>
       </div>

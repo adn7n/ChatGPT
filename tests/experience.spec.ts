@@ -19,14 +19,14 @@ test("chapters, navigation, budget, references and mobile layout", async ({
     .click();
   await expect(page.getByRole("navigation")).toBeHidden();
   await expect(
-    page.getByRole("heading", { name: "293 francos suíços" }),
+    page.getByRole("heading", { name: "293 francos suíços e 99 cêntimos" }),
   ).toBeInViewport();
-  await expect(page.locator(".price-value")).toHaveText("293", {
+  await expect(page.locator(".price-value")).toHaveText("293,99", {
     timeout: 5000,
   });
   await page.getByRole("button", { name: "Sobre e referências" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
-  await expect(page.getByRole("dialog")).toContainText("293 CHF");
+  await expect(page.getByRole("dialog")).toContainText("293,99 CHF");
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).not.toBeVisible();
   for (let i = 0; i < 8; i++) {
@@ -52,7 +52,7 @@ test("original product images load and scroll scenes reverse", async ({
   await page.goto("/");
   await expect(page.locator(".hero-product")).toHaveAttribute(
     "src",
-    "/media/originals/photo-1.png",
+    "/media/cutouts/whoop-black.png",
   );
   for (const selector of [".hero-product", ".white-photo", ".pack-photo"]) {
     const photo = page.locator(selector);
@@ -142,10 +142,10 @@ test("five benefits per activity and small-screen navigation", async ({
     "Viewport variation is covered once using desktop Chromium.",
   );
   await page.goto("/");
-  await expect(page.locator(".role")).toHaveCount(4);
+  await expect(page.locator(".role")).toHaveCount(3);
   for (const role of await page.locator(".role").all())
     await expect(role.locator(".benefit-step")).toHaveCount(5);
-  await expect(page.locator(".role-visual")).toHaveCount(4);
+  await expect(page.locator(".role-visual")).toHaveCount(3);
   for (const size of [
     { width: 320, height: 568 },
     { width: 390, height: 844 },
@@ -158,7 +158,7 @@ test("five benefits per activity and small-screen navigation", async ({
       .getByRole("link", { name: "07 O orçamento" })
       .click();
     await expect(
-      page.getByRole("heading", { name: "293 francos suíços" }),
+      page.getByRole("heading", { name: "293 francos suíços e 99 cêntimos" }),
     ).toBeInViewport();
     expect(
       await page.evaluate(

@@ -1,7 +1,6 @@
 import type { RoleKind } from "../data/roles";
 const labels = {
   sleep: ["À NOITE", "DE MANHÃ"],
-  markets: ["ANTES DA SESSÃO", "GANHAR PERSPETIVA"],
   day: ["CONSTRUIR", "RECUPERAR"],
   recovery: ["O ESFORÇO", "O DESCANSO"],
 };
@@ -24,16 +23,6 @@ export function RoleVisual({ kind }: { kind: RoleKind }) {
             <span key={i} className="signal-bar" style={{ height: `${h}%` }} />
           ))}
         </div>
-      )}
-      {kind === "markets" && (
-        <svg className="signal-chart" viewBox="0 0 600 120" aria-hidden="true">
-          <path className="chart-grid" d="M0 30H600M0 60H600M0 90H600" />
-          <path
-            className="signal-line"
-            pathLength="1"
-            d="M0 95L30 90L60 100L90 70L120 80L150 40L180 58L210 35L240 64L270 42L300 58L330 28L360 42L390 32L420 48L450 20L480 32L510 25L540 37L570 15L600 28"
-          />
-        </svg>
       )}
       {kind === "day" && (
         <div className="day-track" aria-hidden="true">
@@ -65,11 +54,7 @@ export function RoleVisual({ kind }: { kind: RoleKind }) {
           />
         </svg>
       )}
-      <figcaption>
-        {kind === "markets"
-          ? "Gráfico ilustrativo · sem sinais de trading"
-          : "Exemplo de rotina · dados ilustrativos"}
-      </figcaption>
+      <figcaption>Exemplo de rotina · dados ilustrativos</figcaption>
     </figure>
   );
 }

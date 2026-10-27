@@ -3,51 +3,59 @@ import { Photo } from "../components/Photo";
 import { Label } from "../components/Label";
 import type { Assets } from "../data/assets";
 export function People({ assets }: { assets: Assets }) {
-  const verifiedPeople = people.filter(
-    (person) =>
-      person.verified &&
-      person.sources.length &&
-      person.relationship &&
-      assets[person.image],
+  const featured = people.filter(
+    (person) => person.relationship && person.sources.length,
   );
   return (
     <section id="chapter-2" className="people section" data-chapter>
-      <Label number="03">AS PERSONALIDADES</Label>
+      <Label number="03">QUEM JÁ CONFIA NA WHOOP</Label>
       <h2 className="section-title reveal">
-        O desempenho
+        A confiança
         <br />
-        não é exclusivo
+        de quem vai
         <br />
-        <em>dos campeões.</em>
+        <em>mais longe.</em>
       </h2>
       <p className="section-intro reveal">
-        O meu objetivo não é viver como um atleta profissional. É prestar mais
-        atenção aos meus próprios hábitos.
+        No desporto de alto rendimento, conhecer o corpo faz parte da
+        preparação. Estas são algumas das personalidades publicamente associadas
+        à WHOOP.
       </p>
-      {verifiedPeople.length > 0 && (
-        <div className="portraits">
-          {verifiedPeople.map((person) => (
-            <figure key={person.id} className="person-portrait reveal">
-              <Photo assets={assets} name={person.image} alt={person.name} />
-              <figcaption>
-                <h3>{person.name}</h3>
-                <p>
-                  {person.profession} · {person.relationship}
-                </p>
-                <a href={person.sources[0]} target="_blank" rel="noreferrer">
-                  Fonte da ligação à WHOOP ↗
-                </a>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      )}
+      <div className="people-roster">
+        {featured.map((person, i) => (
+          <article
+            className={`person-entry reveal ${assets[person.image] && person.verified ? "with-portrait" : ""}`}
+            key={person.id}
+          >
+            {assets[person.image] && person.verified && (
+              <Photo
+                assets={assets}
+                name={person.image}
+                alt={person.name}
+                className="person-photo"
+              />
+            )}
+            <span className="person-index" aria-hidden="true">
+              0{i + 1}
+            </span>
+            <div className="person-identity">
+              <p className="eyebrow">{person.profession}</p>
+              <h3>{person.name}</h3>
+            </div>
+            <div className="person-context">
+              <p>{person.relationship}</p>
+              <a href={person.sources[0]} target="_blank" rel="noreferrer">
+                Sobre a WHOOP e os seus investidores ↗
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
       <div className="editorial-rule reveal">
         <span>A MINHA REFERÊNCIA</span>
         <p>
-          A minha evolução.
-          <br />
-          Ao meu ritmo.
+          O desempenho não é exclusivo dos campeões.
+          <br />A minha evolução. Ao meu ritmo.
         </p>
       </div>
     </section>

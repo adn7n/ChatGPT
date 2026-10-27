@@ -14,7 +14,6 @@ export const assetKeys = [
   "mahomes",
   "willAhmed",
   "student",
-  "trader",
   "entrepreneur",
   "training",
 ] as const;

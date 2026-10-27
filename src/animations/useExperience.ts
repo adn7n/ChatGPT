@@ -1,3 +1,4 @@
+import { budget, formatCHF } from "../data/budget";
 import {
   useLayoutEffect,
   type RefObject,
@@ -147,7 +148,7 @@ export function useExperience(
               { opacity: 1, duration: 0.8 },
               0.6,
             )
-            .to(".scroll-hint", { color: "#33372e", duration: 0.8 }, 0.6);
+            .to(".scroll-hint", { color: "#d3d7da", duration: 0.8 }, 0.6);
         if (assets.black)
           gsap.to(".hero-product", {
             scale: 1.12,
@@ -286,14 +287,14 @@ export function useExperience(
           );
         const counter = { value: 0 };
         gsap.to(counter, {
-          value: 293,
+          value: budget.total,
           duration: 1.8,
           ease: "power2.out",
           snap: { value: 1 },
           scrollTrigger: { trigger: ".price", start: "top 85%", once: true },
           onUpdate: () => {
             const el = document.querySelector(".price-value");
-            if (el) el.textContent = String(counter.value);
+            if (el) el.textContent = formatCHF(counter.value);
           },
         });
       });

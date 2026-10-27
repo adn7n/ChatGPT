@@ -16,6 +16,11 @@ const entries: [string, string, string, AssetKey][] = [
   ["phelps", "Michael Phelps", "Nadador", "phelps"],
   ["mahomes", "Patrick Mahomes", "Jogador de futebol americano", "mahomes"],
 ];
+const publicRelationships: Record<string, string> = {
+  ronaldo: "Embaixador global e investidor da WHOOP, anunciado em 2024.",
+  phelps: "Campeão olímpico de natação e investidor da WHOOP.",
+  mahomes: "Quarterback e investidor da WHOOP.",
+};
 export const people: Person[] = entries.map(([id, name, profession, image]) => {
   const fact = editorial.requiredFacts.find((item) => item.id === id);
   return {
@@ -24,7 +29,9 @@ export const people: Person[] = entries.map(([id, name, profession, image]) => {
     profession,
     image,
     verified: fact?.verified === true,
-    sources: fact?.sources ?? [],
-    relationship: null,
+    sources: publicRelationships[id]
+      ? ["https://en.wikipedia.org/wiki/Whoop_(company)"]
+      : (fact?.sources ?? []),
+    relationship: publicRelationships[id] ?? null,
   };
 });

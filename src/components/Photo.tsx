@@ -20,6 +20,9 @@ export function Photo({
     "/media/originals/photo-2.png": [1148, 1006],
     "/media/originals/photo-3.png": [1158, 926],
   };
+  sizes["/media/cutouts/whoop-black.png"] = [1305, 1205];
+  sizes["/media/cutouts/whoop-white.png"] = [1340, 1174];
+  sizes["/media/cutouts/whoop-pack.png"] = [1403, 1121];
   const size = sizes[src];
   return (
     <img

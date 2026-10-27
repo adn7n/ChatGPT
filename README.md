@@ -44,7 +44,7 @@ Les couleurs sont définies comme variables : noir/blanc pour la marque, teal `#
 - `src/sections/` : huit chapitres indépendants.
 - `src/animations/` : cycle de vie GSAP, scènes liées au scroll et nettoyage au démontage.
 - `src/hooks/` : chargement et validation du manifeste local des images.
-- `src/data/` : chapitres, vingt bénéfices, personnalités et suivi des sources.
+- `src/data/` : chapitres, quinze bénéfices, personnalités et suivi des sources.
 - `src/styles/` : styles, variantes mobiles, paysage et mouvement réduit.
 - `public/media/` : manifeste et photographies originales.
 - `scripts/check-release.mjs` : contrôle distinct de la complétude des assets et des sources.
@@ -54,11 +54,11 @@ Les scènes sont maintenues à l’écran avec CSS sticky pour conserver un déf
 
 ## Ce qui est implémenté
 
-Huit chapitres, introduction noire, révélation photographique, navigation par ancres, progression, quatre routines avec cinq bénéfices chacune, visualisations illustratives animées, zoom produit, assemblage du pack réversible, fondu noir/blanc, compteur de budget sur fond noir et conclusion.
+Huit chapitres, introduction noire, révélation photographique, navigation par ancres, progression, trois routines avec cinq bénéfices chacune, visualisations illustratives animées, zoom produit, assemblage du pack réversible, fondu noir/blanc, compteur de budget sur fond noir et conclusion.
 
-Les illustrations du sommeil, du marché, de la journée et de la récupération **ne sont ni des mesures personnelles ni une reproduction de l’application WHOOP**. Elles sont explicitement légendées comme illustratives. Aucun graphique ne fournit de signal financier.
+Les illustrations du sommeil, de la journée et de la récupération **ne sont ni des mesures personnelles ni une reproduction de l’application WHOOP**. Elles sont explicitement légendées comme illustratives. Le passage sur le trading a été supprimé à la demande de l’utilisateur.
 
-Les trois photographies du ZIP fourni sont utilisées telles quelles, sans reconstruction, sous `public/media/originals/` :
+Les trois photographies du ZIP fourni sont conservées sous `public/media/originals/`. Des versions détourées avec l’outil d’édition d’image sont utilisées sur le site sous `public/media/cutouts/`. Les originaux ne sont pas écrasés :
 
 | Fichier       | Usage                                                          | Dimensions  |
 | ------------- | -------------------------------------------------------------- | ----------- |
@@ -66,7 +66,7 @@ Les trois photographies du ZIP fourni sont utilisées telles quelles, sans recon
 | `photo-2.png` | Bracelet blanc et transition de style                          | 1148 × 1006 |
 | `photo-3.png` | Pack, calques animés et budget                                 | 1158 × 926  |
 
-Le fond des scènes photographiques reprend la couleur du fond des originaux. Les dimensions sont réservées pour réduire les changements de mise en page. Le total des trois photos est d’environ 1,98 Mo ; elles sont réutilisées depuis le cache. Les photos secondaires sont chargées progressivement. Le JavaScript de production représente environ 122 ko gzip ; aucune police propriétaire n’est téléchargée. Ces tailles ne constituent pas une mesure de performance sur réseau mobile réel.
+Les scènes utilisent désormais des PNG avec canal alpha, sans rectangle de fond. Le détourage a été réalisé avec un outil d’édition d’image à partir des originaux, puis contrôlé visuellement ; il ne doit pas être présenté comme une identité pixel à pixel avec les sources. Les dimensions sont réservées pour stabiliser la mise en page. Les trois détourages pèsent environ 4 Mo et sont réutilisés depuis le cache. Le JavaScript de production représente environ 123 ko gzip.
 
 La scène du pack sépare visuellement quatre zones de la photographie avec des masques CSS : bracelet, câble, chargeur et application. Elle est contrôlée par le scroll et réversible. **Elle ne montre pas une décomposition des composants internes.** Le téléphone illustre l’application et n’est pas inclus dans l’achat. Aucune face de capteur n’est inventée. Les photos disponibles ne permettent pas une rotation réelle ; le blanc reçoit un léger mouvement de cadrage et d’inclinaison.
 
@@ -74,13 +74,13 @@ La scène du pack sépare visuellement quatre zones de la photographie avec des 
 
 La version technique fonctionne, mais la partie photographique et documentaire du brief reste incomplète. Les requêtes vers WHOOP et Unsplash sont refusées par le proxy actif (HTTP 403 « Domain forbidden »). Les domaines utiles sont enregistrés dans le brouillon de configuration, pas appliqués à l’instance. Enregistrer les réglages réseau dans les paramètres, publier l’environnement puis revérifier l’accès avant de reprendre les recherches.
 
-Manquent : photographies historiques et de Will Ahmed, portraits autorisés des personnalités, photographies naturelles de bibliothèque, trading, entreprise, musculation et WHOOP au poignet. Les routines utilisent provisoirement le vrai visuel produit fourni, sans prétendre illustrer ces lieux. Le chapitre des personnalités n’affiche pas de portrait ni de partenariat non vérifié.
+Manquent : photographies historiques et de Will Ahmed, portraits autorisés des personnalités, photographies naturelles de bibliothèque, entreprise, musculation et WHOOP au poignet. Les routines utilisent provisoirement le vrai visuel produit fourni, sans prétendre illustrer ces lieux. Le chapitre présente désormais les liens publics connus de Cristiano Ronaldo (ambassadeur global et investisseur annoncé en 2024), Michael Phelps et Patrick Mahomes (investisseurs). Aucun portrait artificiel n’est créé. Les références renvoient à l’article de présentation de WHOOP ; elles n’ont pas pu être consultées en direct dans cet environnement. La vérification en ligne reste marquée comme non réalisée dans les métadonnées éditoriales.
 
 Le suivi est dans `src/data/editorial.json`. Vérifier via des sources fiables la création en 2012, les cofondateurs, les générations, le statut exact de Cristiano Ronaldo, Steven Bartlett, LeBron James, Michael Phelps et Patrick Mahomes, ainsi que le nom commercial, la matière et la compatibilité du bracelet blanc. Les portraits ne s’affichent qu’avec image, source, statut renseigné et vérification explicite.
 
 Les chemins locaux des photos autorisées se renseignent dans `public/media/manifest.json`, sous `/media/`. Conserver la source, la licence et le crédit des nouveaux visuels. `npm run check:release` échoue actuellement avec la liste des ressources et vérifications manquantes ; il ne faut pas présenter ce contrôle comme réussi.
 
-Le budget de **293 CHF** est fourni par l’utilisateur, pas issu d’un tarif officiel vérifié. `293 / 365 ≈ 0,80 CHF/jour`. Confirmer l’offre exacte, l’abonnement et les accessoires avant achat. Aucun prix individuel n’est inventé.
+Le budget est transcrit de la nouvelle capture du panier fournie par l’utilisateur : **219 CHF** pour un an de WHOOP Peak sur WHOOP 5.0, **48 CHF** pour la SportFlex 5.0 Charge, **267 CHF** de sous-total, **26,99 CHF** de livraison, soit **293,99 CHF** au total. La TVA de **22,03 CHF est déjà incluse** et n’est pas ajoutée à nouveau. Le capteur WHOOP 5.0, le pack de recharge sans fil, la SuperKnit Obsidian et la garantie à vie figurent comme inclus dans cette offre. La durée de batterie de 14 jours est annoncée dans la capture. `293,99 / 365 ≈ 0,81 CHF/jour`. Ces montants correspondent à la capture, pas à un tarif futur garanti. Le nom SportFlex 5.0 Charge et son association au pack 5.0 proviennent également de cette capture.
 
 ## Validation
 
@@ -88,13 +88,13 @@ Playwright utilise Chromium système à `/usr/bin/chromium`. Adapter ce chemin s
 
 Les profils couvrent ordinateur, dimensions et tactile iPhone sous Chromium et mouvement réduit. Un test supplémentaire vérifie les tailles 320 × 568, 390 × 844 et 844 × 390. Il est exécuté une fois sur le profil ordinateur et explicitement ignoré sur les deux autres profils pour éviter une répétition identique.
 
-Vérifications : huit chapitres, vingt bénéfices, navigation, dialogue accessible et fermeture Échap, budget, absence de débordement horizontal, absence d’erreurs JavaScript, chargement des originaux et réversibilité de l’introduction et du pack. Les tests de charte vérifient aussi la langue portugaise, les majuscules, les graisses, l’espacement des titres et les couleurs sémantiques.
+Vérifications : huit chapitres, quinze bénéfices, navigation, dialogue accessible et fermeture Échap, budget, absence de débordement horizontal, absence d’erreurs JavaScript, chargement des détourages et réversibilité de l’introduction et du pack. Les tests de charte vérifient aussi la langue portugaise, les majuscules, les graisses, l’espacement des titres et les couleurs sémantiques.
 
 **Safari sur un véritable iPhone n’a pas été testé.** Le téléchargement WebKit est bloqué par la politique réseau courante ; les domaines nécessaires figurent aussi dans le brouillon.
 
 ## Publication HTTPS
 
-Vercel et Netlify sont configurés. Aucun push Git, déploiement public ni URL HTTPS n’a été créé. Aucun accès Vercel ou Netlify n’est configuré dans les métadonnées de l’environnement et aucune variable Vercel/Netlify n’est injectée.
+Vercel et Netlify sont configurés. Le projet est envoyé sur la branche main de https://github.com/adn7n/ChatGPT. Aucun déploiement public ni URL HTTPS de site n’a été vérifié par cet agent. Aucun accès Vercel ou Netlify n’est configuré dans les métadonnées de l’environnement et aucune variable Vercel/Netlify n’est injectée.
 
 Après intégration des photos et vérification du contenu :
 
@@ -106,7 +106,7 @@ npm run check:release
 
 ### Vercel
 
-Via l’interface : importer `adn7n/ChatGPT` après avoir poussé le projet, sélectionner Vite, commande `npm run build`, sortie `dist`, Node 24, puis Deploy. Le dépôt initial était vide et la branche `main` n’existait pas ; aucun commit initial n’a été poussé par cet agent.
+Via l’interface : importer `adn7n/ChatGPT` après avoir poussé le projet, sélectionner Vite, commande `npm run build`, sortie `dist`, Node 24, puis Deploy. Le dépôt initial était vide et la branche `main` n’existait pas ; le projet a depuis été publié sur la branche main avec l’autorisation de l’utilisateur.
 
 Via la CLI, depuis le dossier projet, avec votre compte connecté :
 

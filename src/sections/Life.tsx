@@ -10,11 +10,11 @@ export function Life({ assets }: { assets: Assets }) {
       <div className="section life-heading">
         <Label number="04">NA MINHA VIDA</Label>
         <h2 className="section-title reveal">
-          Quatro dimensões.
+          Três dimensões.
           <br />O mesmo corpo.
         </h2>
         <p className="section-intro reveal">
-          Estudar. Empreender. Negociar. Treinar.
+          Estudar. Empreender. Treinar.
           <br />O que une tudo isto? A minha recuperação.
         </p>
       </div>
@@ -56,12 +56,6 @@ export function Life({ assets }: { assets: Assets }) {
               ))}
             </ul>
             <RoleVisual kind={role.kind} />
-            {role.name === "Trader" && (
-              <p className="fine-print">
-                Uma referência sobre o meu estado físico. Sem promessas de
-                lucros nem previsões dos mercados.
-              </p>
-            )}
           </div>
           <span className="role-number" aria-hidden="true">
             0{i + 1}
@@ -70,12 +64,12 @@ export function Life({ assets }: { assets: Assets }) {
       ))}
       <div className="life-finale section">
         <span className="eyebrow reveal">
-          QUATRO DIMENSÕES. UMA SÓ FERRAMENTA.
+          TRÊS DIMENSÕES. UMA SÓ FERRAMENTA.
         </span>
         <h3 className="section-title reveal">
-          Estudar. Decidir.
+          Estudar. Construir.
           <br />
-          Construir. Progredir.
+          Treinar. Progredir.
         </h3>
         <p className="section-intro reveal">
           Compreender o meu corpo.

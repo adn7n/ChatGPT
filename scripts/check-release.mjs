@@ -20,7 +20,6 @@ for (const key of [
   "ronaldo",
   "bartlett",
   "student",
-  "trader",
   "entrepreneur",
   "training",
 ]) {

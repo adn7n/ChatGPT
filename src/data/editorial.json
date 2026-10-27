@@ -57,14 +57,18 @@
     {
       "id": "white-compatibility",
       "description": "Nom commercial, matière et compatibilité du bracelet blanc",
-      "verified": false,
-      "sources": []
+      "verified": true,
+      "sources": [
+        "Capture du panier WHOOP Peak 5.0 fournie par l’utilisateur dans cette conversation"
+      ]
     },
     {
       "id": "offer",
-      "description": "Contenu et validité de l’offre personnelle à 293 CHF",
-      "verified": false,
-      "sources": []
+      "description": "219 CHF Peak + 48 CHF SportFlex + 26,99 CHF livraison = 293,99 CHF ; TVA incluse 22,03 CHF",
+      "verified": true,
+      "sources": [
+        "Capture du panier WHOOP Peak 5.0 fournie par l’utilisateur dans cette conversation"
+      ]
     }
   ]
 }

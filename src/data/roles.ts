@@ -1,5 +1,5 @@
 import type { AssetKey } from "./assets";
-export type RoleKind = "sleep" | "markets" | "day" | "recovery";
+export type RoleKind = "sleep" | "day" | "recovery";
 export interface Role {
   title: string;
   name: string;
@@ -19,19 +19,6 @@ export const roles: Role[] = [
       "Identificar os períodos de fadiga.",
       "Criar uma rotina de recuperação mais consistente.",
       "Organizar os estudos tendo em conta o meu descanso.",
-    ],
-  },
-  {
-    name: "Trader",
-    title: "A disciplina começa\nantes dos mercados.",
-    image: "trader",
-    kind: "markets",
-    text: [
-      "Observar a minha recuperação antes de uma sessão.",
-      "Reconhecer o meu estado de fadiga.",
-      "Acompanhar tendências fisiológicas ligadas ao stress.",
-      "Estabelecer horários mais regulares.",
-      "Conhecer melhor o meu estado físico antes de decidir.",
     ],
   },
   {
