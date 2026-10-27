@@ -1,15 +1,15 @@
 import type { RoleKind } from "../data/roles";
 const labels = {
-  sleep: ["LE SOIR", "LE MATIN"],
-  markets: ["AVANT LA SÉANCE", "PRENDRE DU RECUL"],
-  day: ["CONSTRUIRE", "RÉCUPÉRER"],
-  recovery: ["L’EFFORT", "LE REPOS"],
+  sleep: ["À NOITE", "DE MANHÃ"],
+  markets: ["ANTES DA SESSÃO", "GANHAR PERSPETIVA"],
+  day: ["CONSTRUIR", "RECUPERAR"],
+  recovery: ["O ESFORÇO", "O DESCANSO"],
 };
 export function RoleVisual({ kind }: { kind: RoleKind }) {
   return (
     <figure
       className={`role-visual visual-${kind}`}
-      aria-label="Illustration animée d’une routine, sans données personnelles ni mesures WHOOP"
+      aria-label="Ilustração animada de uma rotina, sem dados pessoais nem medições WHOOP"
     >
       <div className="visual-labels">
         <span>{labels[kind][0]}</span>
@@ -38,11 +38,11 @@ export function RoleVisual({ kind }: { kind: RoleKind }) {
       {kind === "day" && (
         <div className="day-track" aria-hidden="true">
           {[
-            ["07", "Repos"],
-            ["09", "Travail"],
-            ["13", "Pause"],
-            ["17", "Sport"],
-            ["22", "Sommeil"],
+            ["07", "Descanso"],
+            ["09", "Trabalho"],
+            ["13", "Pausa"],
+            ["17", "Desporto"],
+            ["22", "Sono"],
           ].map(([time, label]) => (
             <div key={time} className="day-stop">
               <span>
@@ -67,8 +67,8 @@ export function RoleVisual({ kind }: { kind: RoleKind }) {
       )}
       <figcaption>
         {kind === "markets"
-          ? "Illustration graphique · aucun signal de trading"
-          : "Exemple de routine · données illustratives"}
+          ? "Gráfico ilustrativo · sem sinais de trading"
+          : "Exemplo de rotina · dados ilustrativos"}
       </figcaption>
     </figure>
   );

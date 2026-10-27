@@ -7,37 +7,36 @@ export function Introduction({ assets }: { assets: Assets }) {
       <div className={`intro-sticky ${assets.black ? "has-product" : ""}`}>
         {assets.black && <div className="intro-surface" aria-hidden="true" />}
         <div className="intro-question">
-          <div className="eyebrow">UNE EXPLORATION PERSONNELLE</div>
+          <div className="eyebrow">UMA EXPLORAÇÃO PESSOAL</div>
           <h1>
-            Et si mieux
+            E se conhecer
             <br />
-            comprendre son corps
+            melhor o meu corpo
             <br />
-            <em>changeait tout ?</em>
+            <em>mudasse tudo?</em>
           </h1>
         </div>
         <div className="intro-product">
           <Photo
             assets={assets}
             name="black"
-            alt="Bracelet WHOOP noir, photographie du modèle choisi"
+            alt="Pulseira WHOOP preta, fotografia do modelo escolhido"
             className="hero-product"
           />
           <div className="intro-statement">
             <p className="hero-brand">WHOOP.</p>
-            <h2>Plus qu’un bracelet.</h2>
+            <h2>Mais do que uma pulseira.</h2>
             <p>
-              Une nouvelle façon de comprendre
-              <br />
-              mes performances.
+              Uma nova forma de compreender
+              <br />o meu desempenho.
             </p>
           </div>
         </div>
         <a className="scroll-hint" href="#chapter-1">
-          DÉFILER POUR EXPLORER <span aria-hidden="true">↓</span>
+          DESLIZAR PARA EXPLORAR <span aria-hidden="true">↓</span>
         </a>
         <span className="side-note" aria-hidden="true">
-          SOMMEIL / RÉCUPÉRATION / EFFORT
+          SONO / RECUPERAÇÃO / ESFORÇO
         </span>
       </div>
     </section>

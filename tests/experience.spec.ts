@@ -12,19 +12,19 @@ test("chapters, navigation, budget, references and mobile layout", async ({
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await expect(page.locator("[data-chapter]")).toHaveCount(8);
-  await page.getByRole("button", { name: "Chapitres" }).click();
+  await page.getByRole("button", { name: "Capítulos" }).click();
   await page
     .getByRole("navigation")
-    .getByRole("link", { name: "07 Le budget" })
+    .getByRole("link", { name: "07 O orçamento" })
     .click();
   await expect(page.getByRole("navigation")).toBeHidden();
   await expect(
-    page.getByRole("heading", { name: "293 francs suisses" }),
+    page.getByRole("heading", { name: "293 francos suíços" }),
   ).toBeInViewport();
   await expect(page.locator(".price-value")).toHaveText("293", {
     timeout: 5000,
   });
-  await page.getByRole("button", { name: "À propos & références" }).click();
+  await page.getByRole("button", { name: "Sobre e referências" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.getByRole("dialog")).toContainText("293 CHF");
   await page.keyboard.press("Escape");
@@ -102,7 +102,7 @@ test("original product images load and scroll scenes reverse", async ({
     await page.waitForTimeout(900);
     const start = await page
       .locator(".pack-layer-band")
-      .evaluate((el) => getComputedStyle(el).transform);
+      .evaluate((el) => el.getBoundingClientRect().x);
     await page.evaluate(
       (p) =>
         window.scrollTo({ top: p.top + p.range * 0.5, behavior: "instant" }),
@@ -111,8 +111,8 @@ test("original product images load and scroll scenes reverse", async ({
     await page.waitForTimeout(900);
     const separated = await page
       .locator(".pack-layer-band")
-      .evaluate((el) => getComputedStyle(el).transform);
-    expect(separated).not.toBe(start);
+      .evaluate((el) => el.getBoundingClientRect().x);
+    expect(Math.abs(separated - start)).toBeGreaterThan(5);
     await page.screenshot({
       path: `test-results/${testInfo.project.name}-pack.png`,
     });
@@ -124,8 +124,8 @@ test("original product images load and scroll scenes reverse", async ({
     expect(
       await page
         .locator(".pack-layer-band")
-        .evaluate((el) => getComputedStyle(el).transform),
-    ).toBe(start);
+        .evaluate((el) => el.getBoundingClientRect().x),
+    ).toBeCloseTo(start, 1);
   }
   expect(
     await page.evaluate(
@@ -152,13 +152,13 @@ test("five benefits per activity and small-screen navigation", async ({
     { width: 844, height: 390 },
   ]) {
     await page.setViewportSize(size);
-    await page.getByRole("button", { name: "Chapitres" }).click();
+    await page.getByRole("button", { name: "Capítulos" }).click();
     await page
       .getByRole("navigation")
-      .getByRole("link", { name: "07 Le budget" })
+      .getByRole("link", { name: "07 O orçamento" })
       .click();
     await expect(
-      page.getByRole("heading", { name: "293 francs suisses" }),
+      page.getByRole("heading", { name: "293 francos suíços" }),
     ).toBeInViewport();
     expect(
       await page.evaluate(

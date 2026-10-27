@@ -8,16 +8,14 @@ export function Life({ assets }: { assets: Assets }) {
   return (
     <section id="chapter-3" className="life" data-chapter>
       <div className="section life-heading">
-        <Label number="04">DANS MA VIE</Label>
+        <Label number="04">NA MINHA VIDA</Label>
         <h2 className="section-title reveal">
-          Quatre vies.
-          <br />
-          Un même corps.
+          Quatro dimensões.
+          <br />O mesmo corpo.
         </h2>
         <p className="section-intro reveal">
-          Étudier. Entreprendre. Trader. S’entraîner.
-          <br />
-          Le lien entre tout ça ? Ma récupération.
+          Estudar. Empreender. Negociar. Treinar.
+          <br />O que une tudo isto? A minha recuperação.
         </p>
       </div>
       {roles.map((role, i) => (
@@ -25,7 +23,7 @@ export function Life({ assets }: { assets: Assets }) {
           <Photo
             assets={assets}
             name={role.image}
-            alt={`Environnement ${role.name.toLowerCase()}`}
+            alt={`Ambiente de ${role.name.toLowerCase()}`}
             className="role-photo"
           />
           {!assets[role.image] && (
@@ -33,7 +31,7 @@ export function Life({ assets }: { assets: Assets }) {
               <Photo
                 assets={assets}
                 name="black"
-                alt="Le bracelet WHOOP noir choisi pour accompagner ma routine"
+                alt="A pulseira WHOOP preta escolhida para acompanhar a minha rotina"
               />
             </figure>
           )}
@@ -60,8 +58,8 @@ export function Life({ assets }: { assets: Assets }) {
             <RoleVisual kind={role.kind} />
             {role.name === "Trader" && (
               <p className="fine-print">
-                Un repère sur mon état physique. Aucune promesse de profits ni
-                de prédiction des marchés.
+                Uma referência sobre o meu estado físico. Sem promessas de
+                lucros nem previsões dos mercados.
               </p>
             )}
           </div>
@@ -72,17 +70,17 @@ export function Life({ assets }: { assets: Assets }) {
       ))}
       <div className="life-finale section">
         <span className="eyebrow reveal">
-          QUATRE DIMENSIONS. UN SEUL OUTIL.
+          QUATRO DIMENSÕES. UMA SÓ FERRAMENTA.
         </span>
         <h3 className="section-title reveal">
-          Étudier. Décider.
+          Estudar. Decidir.
           <br />
-          Construire. Progresser.
+          Construir. Progredir.
         </h3>
         <p className="section-intro reveal">
-          Comprendre mon corps.
+          Compreender o meu corpo.
           <br />
-          Repousser mes limites intelligemment.
+          Superar os meus limites com inteligência.
         </p>
       </div>
     </section>

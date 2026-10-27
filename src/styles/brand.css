@@ -1,0 +1,253 @@
+/* Supplied WHOOP guidelines. Proprietary font files are not bundled.
+   Installed licensed fonts are preferred; documented platform fallbacks follow. */
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Semibold"), local("ProximaNova-Semibold");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Bold"), local("ProximaNova-Bold");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DINPro";
+  src: local("DINPro-Bold"), local("DIN Pro Bold");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --font-words:
+    "Proxima Nova", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  --font-numbers:
+    "DINPro", "DIN Alternate", "Arial Narrow", "Helvetica Neue", Arial,
+    sans-serif;
+  --whoop-black: #000000;
+  --whoop-white: #ffffff;
+  --whoop-teal: #00f19f;
+  --whoop-strain: #0093e7;
+  --whoop-recovery: #67aee6;
+  --whoop-sleep: #7ba1bb;
+  --whoop-high: #16ec06;
+  --whoop-medium: #ffde00;
+  --whoop-low: #ff0026;
+  --whoop-background-top: #283339;
+  --whoop-background-bottom: #101518;
+  font-family: var(--font-words);
+  font-weight: 600;
+  letter-spacing: normal;
+  color: var(--whoop-white);
+  background: var(--whoop-black);
+}
+body,
+button {
+  font-family: var(--font-words);
+  font-weight: 600;
+}
+h1,
+h2,
+h3,
+.hero-brand,
+.closing-brand {
+  font-family: var(--font-words);
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase;
+  line-height: 1.12;
+}
+em {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: normal;
+  color: inherit;
+}
+p,
+li,
+.section-intro,
+.history-copy p,
+.style-copy p,
+.intro-statement > p:last-child,
+.closing-brand p {
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+  line-height: 1.6;
+}
+.eyebrow,
+.visual-labels,
+.timeline span,
+.detail-notes span {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.price,
+.price-value,
+.daily,
+.year,
+.chapter-count,
+.role-number,
+.day-stop > span,
+.eyebrow > span:first-child,
+.benefit-step > span,
+nav small {
+  font-family: var(--font-numbers);
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: normal !important;
+  text-transform: none;
+}
+.price > span:last-child,
+.daily > span,
+.year > span {
+  font-family: var(--font-words);
+  font-weight: 700;
+  letter-spacing: 0.1em !important;
+}
+.wordmark {
+  font-family: var(--font-words);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  min-width: 100px;
+  gap: 32px;
+}
+.wordmark > span {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.hero-brand {
+  font-size: clamp(56px, 7vw, 134px) !important;
+}
+.closing-brand {
+  font-size: clamp(58px, 8vw, 130px);
+}
+.intro h1 {
+  font-size: clamp(32px, 4.7vw, 92px);
+}
+.section-title {
+  font-size: clamp(35px, 4.5vw, 88px);
+}
+.history-copy h3,
+.style-copy h3,
+.detail-notes h3 {
+  font-size: clamp(23px, 2.5vw, 42px);
+}
+.has-product .intro-statement h2 {
+  font-size: clamp(24px, 2.4vw, 44px);
+}
+.life-finale .section-title {
+  font-size: clamp(30px, 4.1vw, 76px);
+}
+.role {
+  background: linear-gradient(
+    180deg,
+    var(--whoop-background-top),
+    var(--whoop-background-bottom)
+  );
+}
+.role h3 {
+  font-size: clamp(27px, 3vw, 48px);
+}
+.visual-sleep .signal-bar,
+.visual-sleep .signal-bar:nth-child(3n) {
+  background: var(--whoop-sleep);
+}
+.visual-recovery .signal-line {
+  stroke: var(--whoop-recovery);
+}
+/* Financial illustration is neutral: it is not a proprietary Strain score. */
+.visual-markets .signal-line {
+  stroke: var(--whoop-white);
+}
+.day-stop i {
+  background: var(--whoop-teal);
+}
+.reading-progress {
+  background: var(--whoop-teal);
+}
+a:focus-visible,
+button:focus-visible {
+  outline-color: var(--whoop-teal);
+}
+.role-3 .eyebrow {
+  color: var(--whoop-strain);
+}
+.role-0 .eyebrow {
+  color: var(--whoop-sleep);
+}
+.style-section em,
+.outro .section-title em {
+  color: inherit;
+}
+.pack-study-heading h3 {
+  font-size: clamp(26px, 3.1vw, 58px);
+}
+@media (min-width: 1024px) {
+  .role h3 {
+    font-size: clamp(27px, min(2.55vw, 4.5svh), 46px);
+    margin: 22px 0 26px;
+    line-height: 1.18;
+  }
+  .section-title {
+    font-size: clamp(48px, 4.5vw, 88px);
+  }
+  .life-finale .section-title {
+    font-size: clamp(42px, 4.1vw, 78px);
+  }
+  .keyboard-hint > span {
+    display: none;
+  }
+  .header-actions {
+    gap: 22px;
+  }
+  .has-product .hero-brand {
+    font-size: clamp(64px, 6.7vw, 128px) !important;
+  }
+  .has-product .intro-product {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 5%;
+  }
+}
+@media (max-width: 700px) {
+  .intro h1 {
+    font-size: clamp(23px, 6.1vw, 39px);
+  }
+  .section-title {
+    font-size: clamp(28px, 7vw, 44px);
+  }
+  .role-content h3 {
+    font-size: clamp(24px, 6.4vw, 37px);
+  }
+  .has-product .hero-brand {
+    font-size: clamp(42px, 12vw, 65px) !important;
+  }
+  .has-product .intro-statement h2 {
+    font-size: clamp(19px, 5vw, 28px);
+  }
+  .closing-brand {
+    font-size: clamp(42px, 11vw, 65px);
+  }
+  .life-finale .section-title {
+    font-size: clamp(24px, 6vw, 38px);
+  }
+  .pack-study-heading h3 {
+    font-size: clamp(23px, 6vw, 33px);
+  }
+  .wordmark {
+    font-size: 23px;
+    gap: 0;
+  }
+}
+@media (max-width: 700px) {
+  .year {
+    font-size: 36vw;
+  }
+  .history-grid > * {
+    min-width: 0;
+  }
+}

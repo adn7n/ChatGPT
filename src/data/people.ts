@@ -10,11 +10,11 @@ export interface Person {
   relationship: string | null;
 }
 const entries: [string, string, string, AssetKey][] = [
-  ["ronaldo", "Cristiano Ronaldo", "Footballeur", "ronaldo"],
-  ["bartlett", "Steven Bartlett", "Entrepreneur", "bartlett"],
-  ["lebron", "LeBron James", "Basketteur", "lebron"],
-  ["phelps", "Michael Phelps", "Nageur", "phelps"],
-  ["mahomes", "Patrick Mahomes", "Joueur de football américain", "mahomes"],
+  ["ronaldo", "Cristiano Ronaldo", "Futebolista", "ronaldo"],
+  ["bartlett", "Steven Bartlett", "Empreendedor", "bartlett"],
+  ["lebron", "LeBron James", "Basquetebolista", "lebron"],
+  ["phelps", "Michael Phelps", "Nadador", "phelps"],
+  ["mahomes", "Patrick Mahomes", "Jogador de futebol americano", "mahomes"],
 ];
 export const people: Person[] = entries.map(([id, name, profession, image]) => {
   const fact = editorial.requiredFacts.find((item) => item.id === id);

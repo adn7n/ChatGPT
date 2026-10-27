@@ -4,37 +4,37 @@ import type { Assets } from "../data/assets";
 export function Style({ assets }: { assets: Assets }) {
   return (
     <section id="chapter-5" className="style-section section" data-chapter>
-      <Label number="06">UN AUTRE STYLE</Label>
+      <Label number="06">OUTRO ESTILO</Label>
       <h2 className="section-title reveal">
-        Une technologie.
+        Uma tecnologia.
         <br />
-        <em>Plusieurs styles.</em>
+        <em>Vários estilos.</em>
       </h2>
       <div className="style-composition">
         <div className="style-visual">
           <Photo
             assets={assets}
             name="black"
-            alt="Le bracelet noir avant la transition vers le blanc"
+            alt="A pulseira preta antes da transição para a branca"
             className="style-black-photo"
           />
           <Photo
             assets={assets}
             name="white"
-            alt="Bracelet blanc choisi, modèle à confirmer à partir de la référence"
+            alt="Pulseira branca escolhida, modelo a confirmar a partir da referência"
             className="white-photo"
           />
         </div>
         <div className="style-copy reveal">
-          <span className="eyebrow">UNE AUTRE EXPRESSION</span>
+          <span className="eyebrow">OUTRA EXPRESSÃO</span>
           <h3>
-            Le blanc, pour
+            O branco, para
             <br />
-            une autre esthétique.
+            uma nova estética.
           </h3>
           <p>
-            Un bracelet blanc supplémentaire dans mon projet. Le modèle et sa
-            compatibilité seront confirmés à partir de la référence choisie.
+            Uma pulseira branca adicional para o meu projeto. O modelo e a
+            compatibilidade serão confirmados a partir da referência escolhida.
           </p>
         </div>
       </div>

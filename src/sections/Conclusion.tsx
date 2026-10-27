@@ -4,37 +4,35 @@ import type { Assets } from "../data/assets";
 export function Conclusion({ assets }: { assets: Assets }) {
   return (
     <section id="chapter-7" className="outro section" data-chapter>
-      <Label number="08">LA SUITE</Label>
+      <Label number="08">O PRÓXIMO PASSO</Label>
       <p className="closing-line reveal">
-        Je ne cherche pas simplement
-        <br />à en faire plus.
+        Não quero apenas
+        <br />
+        fazer mais.
       </p>
       <h2 className="section-title reveal">
-        Je veux comprendre
+        Quero compreender
         <br />
-        comment{" "}
-        <em>
-          mieux
-          <br />
-          fonctionner.
-        </em>
+        como funcionar
+        <br />
+        <em>melhor.</em>
       </h2>
       <Photo
         assets={assets}
         name="black"
-        alt="Bracelet WHOOP noir"
+        alt="Pulseira WHOOP preta"
         className="outro-product"
       />
       <div className="closing-brand reveal">
         WHOOP.
         <p>
-          Comprendre aujourd’hui.
+          Compreender hoje.
           <br />
-          Progresser demain.
+          Progredir amanhã.
         </p>
       </div>
       <a className="back-top" href="#chapter-0">
-        REVENIR AU DÉBUT <span aria-hidden="true">↑</span>
+        VOLTAR AO INÍCIO <span aria-hidden="true">↑</span>
       </a>
     </section>
   );

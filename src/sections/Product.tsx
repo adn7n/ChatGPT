@@ -12,16 +12,16 @@ export function Product({ assets }: { assets: Assets }) {
   return (
     <section id="chapter-4" className="detail light" data-chapter>
       <div className="section detail-heading">
-        <Label number="05">EN DÉTAIL</Label>
+        <Label number="05">EM DETALHE</Label>
         <h2 className="section-title reveal">
-          Discret au poignet.
+          Discreta no pulso.
           <br />
-          Présent au quotidien.
+          Presente no dia a dia.
         </h2>
         <p className="section-intro reveal">
-          Le textile. Le fermoir. Le capteur. La recharge.
+          O tecido. O fecho. O sensor. O carregamento.
           <br />
-          Chaque détail a son rôle.
+          Cada detalhe tem a sua função.
         </p>
       </div>
       {assets.black && (
@@ -30,7 +30,7 @@ export function Product({ assets }: { assets: Assets }) {
             <Photo
               assets={assets}
               name="black"
-              alt="Vue d’ensemble du bracelet WHOOP noir"
+              alt="Vista geral da pulseira WHOOP preta"
               className="assembled"
             />
             {hasParts &&
@@ -41,10 +41,10 @@ export function Product({ assets }: { assets: Assets }) {
                   name={key}
                   alt={
                     {
-                      clasp: "Fermoir",
-                      sensor: "Module capteur",
-                      charger: "Chargeur",
-                      cable: "Câble USB-C",
+                      clasp: "Fecho",
+                      sensor: "Módulo sensor",
+                      charger: "Carregador",
+                      cable: "Cabo USB-C",
                     }[key]
                   }
                   className={`part part-${key}`}
@@ -57,16 +57,17 @@ export function Product({ assets }: { assets: Assets }) {
         <div className="pack-study">
           <div className="pack-sticky">
             <div className="pack-study-heading">
-              <span className="eyebrow">LE PACK / VUE D’ENSEMBLE</span>
+              <span className="eyebrow">O CONJUNTO / VISTA GERAL</span>
               <h3>
-                Chaque élément.
-                <br />À sa place.
+                Cada elemento.
+                <br />
+                No seu lugar.
               </h3>
             </div>
             <div
               className="pack-composition"
               role="img"
-              aria-label="Photographie fournie du pack : bracelet noir, câble USB-C, chargeur et illustration de l’application. Téléphone non inclus."
+              aria-label="Fotografia fornecida do conjunto: pulseira preta, cabo USB-C, carregador e ilustração da aplicação. Telemóvel não incluído."
             >
               {(["band", "cable", "charger", "app"] as const).map((part) => (
                 <div
@@ -84,11 +85,10 @@ export function Product({ assets }: { assets: Assets }) {
               ))}
             </div>
             <p className="pack-caption">
-              Bracelet · câble USB-C · chargeur · application
+              Pulseira · cabo USB-C · carregador · aplicação
               <br />
               <span>
-                Mise en scène 2D de la photographie fournie. Téléphone non
-                inclus.
+                Composição 2D da fotografia fornecida. Telemóvel não incluído.
               </span>
             </p>
           </div>
@@ -96,34 +96,34 @@ export function Product({ assets }: { assets: Assets }) {
       )}
       <div className="detail-notes section">
         <div className="reveal">
-          <span>01 / LE PORT</span>
+          <span>01 / NO PULSO</span>
           <h3>
-            Une place dans
+            Um lugar na
             <br />
-            ma routine.
+            minha rotina.
           </h3>
         </div>
         <div className="reveal">
-          <span>02 / LES REPÈRES</span>
+          <span>02 / OS INDICADORES</span>
           <h3>
-            Sommeil. Effort.
+            Sono. Esforço.
             <br />
-            Récupération.
+            Recuperação.
           </h3>
         </div>
         <div className="reveal">
-          <span>03 / L’APPROCHE</span>
+          <span>03 / A ABORDAGEM</span>
           <h3>
-            Observer.
+            Observar.
             <br />
-            Puis ajuster.
+            Depois, ajustar.
           </h3>
         </div>
       </div>
       <p className="fine-print section">
-        Les indicateurs sont des estimations destinées au bien-être. Ils ne
-        remplacent pas un avis médical. Les fonctionnalités dépendent du modèle
-        et de l’abonnement.
+        Os indicadores são estimativas destinadas ao bem-estar. Não substituem
+        aconselhamento médico. As funcionalidades dependem do modelo e da
+        subscrição.
       </p>
     </section>
   );

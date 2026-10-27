@@ -21,7 +21,7 @@ test("desktop scenes fit laptops and full HD, with chapter keys and fullscreen",
       ),
     ).toBe(true);
     await expect(
-      page.getByRole("button", { name: "Afficher en plein écran" }),
+      page.getByRole("button", { name: "Apresentar em ecrã inteiro" }),
     ).toBeVisible();
     await page.evaluate(() => {
       const intro = document.querySelector(".intro")!;
@@ -64,11 +64,13 @@ test("desktop scenes fit laptops and full HD, with chapter keys and fullscreen",
         .evaluate((el) => Math.round(el.getBoundingClientRect().top)),
     )
     .toBeLessThan(100);
-  await page.getByRole("button", { name: "Afficher en plein écran" }).click();
+  await page
+    .getByRole("button", { name: "Apresentar em ecrã inteiro" })
+    .click();
   await expect
     .poll(() => page.evaluate(() => Boolean(document.fullscreenElement)))
     .toBe(true);
-  await page.getByRole("button", { name: "Quitter le plein écran" }).click();
+  await page.getByRole("button", { name: "Sair do ecrã inteiro" }).click();
   await expect
     .poll(() => page.evaluate(() => Boolean(document.fullscreenElement)))
     .toBe(false);

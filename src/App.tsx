@@ -39,22 +39,22 @@ export function App() {
   if (!loaded)
     return (
       <div className="loading-screen" role="status">
-        WHOOP<span>Préparation de l’expérience</span>
+        WHOOP<span>A preparar a experiência</span>
       </div>
     );
   return (
     <div ref={root}>
       <a href="#main" className="skip">
-        Aller au contenu
+        Ir para o conteúdo
       </a>
       <div className="reading-progress" aria-hidden="true" />
       <header>
         <a
           className="wordmark"
           href="#chapter-0"
-          aria-label="WHOOP — retour au début"
+          aria-label="WHOOP — voltar ao início"
         >
-          WHOOP<span>BEYOND PERFORMANCE</span>
+          WHOOP<span>ALÉM DO DESEMPENHO</span>
         </a>
         <div className="header-actions">
           <PresentationControls active={active} blocked={menu || sources} />
@@ -65,12 +65,12 @@ export function App() {
             aria-controls="chapters"
             onClick={() => setMenu(!menu)}
           >
-            {menu ? "Fermer" : "Chapitres"}{" "}
+            {menu ? "Fechar" : "Capítulos"}{" "}
             <span aria-hidden="true">{menu ? "−" : "+"}</span>
           </button>
         </div>
       </header>
-      <nav id="chapters" aria-label="Chapitres" hidden={!menu}>
+      <nav id="chapters" aria-label="Capítulos" hidden={!menu}>
         {chapters.map((chapter, i) => (
           <a
             key={chapter}
@@ -94,11 +94,11 @@ export function App() {
         <Conclusion assets={assets} />
       </main>
       <footer>
-        <span>UNE PRÉSENTATION PERSONNELLE · 2026</span>
+        <span>UMA APRESENTAÇÃO PESSOAL · 2026</span>
         <button ref={sourcesButton} onClick={() => setSources(true)}>
-          À propos & références ↗
+          Sobre e referências ↗
         </button>
-        <span>PROJET INDÉPENDANT, NON AFFILIÉ À WHOOP</span>
+        <span>PROJETO INDEPENDENTE, SEM AFILIAÇÃO À WHOOP</span>
       </footer>
       <dialog
         ref={sourceDialog}
@@ -114,30 +114,31 @@ export function App() {
           <button
             className="dialog-close"
             onClick={closeSources}
-            aria-label="Fermer les références"
+            aria-label="Fechar as referências"
           >
-            Fermer ×
+            Fechar ×
           </button>
-          <span className="eyebrow">NOTE ÉDITORIALE</span>
-          <h2>Une intention personnelle.</h2>
+          <span className="eyebrow">NOTA EDITORIAL</span>
+          <h2>Uma intenção pessoal.</h2>
           <p>
-            Cette présentation explique un projet d’achat. Elle ne promet ni
-            résultat sportif, ni amélioration scolaire, ni rendement financier.
+            Esta apresentação explica uma intenção de compra. Não promete
+            resultados desportivos, melhorias académicas nem rendimentos
+            financeiros.
           </p>
           <p>
-            Le budget de 293 CHF est une estimation fournie par l’auteur. Le
-            modèle, les accessoires, le bracelet blanc et les conditions de
-            l’offre restent à confirmer.
+            O orçamento de 293 CHF é uma estimativa fornecida pelo autor. O
+            modelo, os acessórios, a pulseira branca e as condições da oferta
+            estão por confirmar.
           </p>
           <p>
-            Les trois visuels produit proviennent des photographies fournies
-            pour ce projet. Le téléphone visible dans le pack illustre
-            l’application et n’est pas inclus dans l’achat. Les portraits,
-            l’historique détaillé et les affirmations de partenariat restent
-            exclus jusqu’à vérification des sources et des droits.
+            As três imagens do produto são as fotografias fornecidas para este
+            projeto. O telemóvel visível no conjunto ilustra a aplicação e não
+            está incluído na compra. Os retratos, a história detalhada e as
+            afirmações de parceria só serão apresentados após verificação das
+            fontes e dos direitos.
           </p>
           <a href="https://www.whoop.com/" target="_blank" rel="noreferrer">
-            Consulter le site officiel WHOOP ↗
+            Consultar o site oficial da WHOOP ↗
           </a>
         </div>
       </dialog>

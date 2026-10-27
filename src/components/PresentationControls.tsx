@@ -50,28 +50,26 @@ export function PresentationControls({
       else await document.documentElement.requestFullscreen();
       setNotice("");
     } catch {
-      setNotice(
-        "Plein écran indisponible : utilisez le bouton vert de votre fenêtre.",
-      );
+      setNotice("Ecrã inteiro indisponível: utilize o botão verde da janela.");
     }
   };
   return (
     <div className="presentation-controls">
       <span
         className="keyboard-hint"
-        title="Flèches gauche et droite : changer de chapitre. Défilement : animer la scène."
+        title="Setas esquerda e direita: mudar de capítulo. Deslocar a página: animar a cena."
       >
-        ← → <span>CHAPITRES</span>
+        ← → <span>CAPÍTULOS</span>
       </span>
       {document.fullscreenEnabled && (
         <button
           className="fullscreen-toggle"
           onClick={toggle}
           aria-label={
-            fullscreen ? "Quitter le plein écran" : "Afficher en plein écran"
+            fullscreen ? "Sair do ecrã inteiro" : "Apresentar em ecrã inteiro"
           }
         >
-          {fullscreen ? "Quitter le plein écran" : "Plein écran"}{" "}
+          {fullscreen ? "Sair do ecrã inteiro" : "Ecrã inteiro"}{" "}
           <span aria-hidden="true">⤢</span>
         </button>
       )}

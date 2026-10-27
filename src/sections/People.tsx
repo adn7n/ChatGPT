@@ -12,17 +12,17 @@ export function People({ assets }: { assets: Assets }) {
   );
   return (
     <section id="chapter-2" className="people section" data-chapter>
-      <Label number="03">LES PERSONNALITÉS</Label>
+      <Label number="03">AS PERSONALIDADES</Label>
       <h2 className="section-title reveal">
-        La performance
+        O desempenho
         <br />
-        n’est pas réservée
+        não é exclusivo
         <br />
-        <em>aux champions.</em>
+        <em>dos campeões.</em>
       </h2>
       <p className="section-intro reveal">
-        Ce qui m’intéresse n’est pas de vivre comme un athlète professionnel.
-        C’est d’accorder plus d’attention à mes propres habitudes.
+        O meu objetivo não é viver como um atleta profissional. É prestar mais
+        atenção aos meus próprios hábitos.
       </p>
       {verifiedPeople.length > 0 && (
         <div className="portraits">
@@ -35,7 +35,7 @@ export function People({ assets }: { assets: Assets }) {
                   {person.profession} · {person.relationship}
                 </p>
                 <a href={person.sources[0]} target="_blank" rel="noreferrer">
-                  Source du lien avec WHOOP ↗
+                  Fonte da ligação à WHOOP ↗
                 </a>
               </figcaption>
             </figure>
@@ -43,10 +43,11 @@ export function People({ assets }: { assets: Assets }) {
         </div>
       )}
       <div className="editorial-rule reveal">
-        <span>LA BONNE RÉFÉRENCE</span>
+        <span>A MINHA REFERÊNCIA</span>
         <p>
-          Ma progression.
-          <br />À mon échelle.
+          A minha evolução.
+          <br />
+          Ao meu ritmo.
         </p>
       </div>
     </section>

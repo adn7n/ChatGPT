@@ -1,10 +1,10 @@
 export const chapters = [
-  "Introduction",
-  "Les origines",
-  "Les personnalités",
-  "Dans ma vie",
-  "En détail",
-  "Un autre style",
-  "Le budget",
-  "La suite",
+  "Introdução",
+  "As origens",
+  "As personalidades",
+  "Na minha vida",
+  "Em detalhe",
+  "Outro estilo",
+  "O orçamento",
+  "O próximo passo",
 ];

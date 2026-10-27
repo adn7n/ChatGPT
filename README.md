@@ -1,8 +1,8 @@
 # WHOOP — Beyond Performance
 
-**Comprendre mon corps. Repousser mes limites intelligemment.**
+**Compreender o meu corpo. Superar os meus limites com inteligência.**
 
-Présentation personnelle en français, indépendante de WHOOP. React, TypeScript, Vite, GSAP ScrollTrigger et CSS responsive. Police libre Inter fournie localement sous licence OFL.
+Présentation personnelle en portugais européen (`pt-PT`), indépendante de WHOOP. React, TypeScript, Vite, GSAP ScrollTrigger et CSS responsive. La typographie et les couleurs suivent les captures de la charte fournies par l’utilisateur.
 
 ## Démarrage
 
@@ -32,6 +32,12 @@ Le format principal est désormais l’ordinateur, avec des compositions panoram
 - **Flèches gauche/droite** : chapitre précédent/suivant, hors menus et champs interactifs.
 - **Molette ou trackpad** : progression des scènes et animations au défilement.
 
+## Typographie et couleurs
+
+`src/styles/brand.css` applique la charte fournie : titres en Proxima Nova Bold, majuscules et espacement de 0,1 em ; corps en Proxima Nova Semibold sans transformation ; chiffres en DINPro Bold avec espacement normal. Les fichiers propriétaires ne sont pas fournis : des sources `local()` utilisent les variantes installées légalement, sinon les polices de secours prévues par la charte (police système, Helvetica Neue, Helvetica, Arial) prennent le relais. Il ne faut donc pas annoncer que Proxima Nova et DINPro sont embarquées. Pour un rendu identique sur tous les postes, intégrer ensuite les fichiers webfont autorisés par leur licence.
+
+Les couleurs sont définies comme variables : noir/blanc pour la marque, teal `#00F19F` pour la progression et les accents, sommeil `#7BA1BB`, récupération sans évaluation `#67AEE6` et effort `#0093E7`. Les seuils de récupération sont définis mais aucun score personnel n’est fabriqué. Le graphique financier illustratif reste neutre.
+
 ## Architecture
 
 - `src/components/` : photographies, libellés et visualisations de routine.
@@ -60,7 +66,7 @@ Les trois photographies du ZIP fourni sont utilisées telles quelles, sans recon
 | `photo-2.png` | Bracelet blanc et transition de style                          | 1148 × 1006 |
 | `photo-3.png` | Pack, calques animés et budget                                 | 1158 × 926  |
 
-Le fond des scènes photographiques reprend la couleur du fond des originaux. Les dimensions sont réservées pour réduire les changements de mise en page. Le total des trois photos est d’environ 1,98 Mo ; elles sont réutilisées depuis le cache. Les photos secondaires sont chargées progressivement. Le JavaScript de production représente environ 121 ko gzip, la police locale environ 48 ko. Ces tailles ne constituent pas une mesure de performance sur réseau mobile réel.
+Le fond des scènes photographiques reprend la couleur du fond des originaux. Les dimensions sont réservées pour réduire les changements de mise en page. Le total des trois photos est d’environ 1,98 Mo ; elles sont réutilisées depuis le cache. Les photos secondaires sont chargées progressivement. Le JavaScript de production représente environ 122 ko gzip ; aucune police propriétaire n’est téléchargée. Ces tailles ne constituent pas une mesure de performance sur réseau mobile réel.
 
 La scène du pack sépare visuellement quatre zones de la photographie avec des masques CSS : bracelet, câble, chargeur et application. Elle est contrôlée par le scroll et réversible. **Elle ne montre pas une décomposition des composants internes.** Le téléphone illustre l’application et n’est pas inclus dans l’achat. Aucune face de capteur n’est inventée. Les photos disponibles ne permettent pas une rotation réelle ; le blanc reçoit un léger mouvement de cadrage et d’inclinaison.
 
@@ -82,7 +88,7 @@ Playwright utilise Chromium système à `/usr/bin/chromium`. Adapter ce chemin s
 
 Les profils couvrent ordinateur, dimensions et tactile iPhone sous Chromium et mouvement réduit. Un test supplémentaire vérifie les tailles 320 × 568, 390 × 844 et 844 × 390. Il est exécuté une fois sur le profil ordinateur et explicitement ignoré sur les deux autres profils pour éviter une répétition identique.
 
-Vérifications : huit chapitres, vingt bénéfices, navigation, dialogue accessible et fermeture Échap, budget, absence de débordement horizontal, absence d’erreurs JavaScript, chargement des originaux et réversibilité de l’introduction et du pack. Un contrôle de production vérifie aussi les photos et le chargement d’Inter depuis le site.
+Vérifications : huit chapitres, vingt bénéfices, navigation, dialogue accessible et fermeture Échap, budget, absence de débordement horizontal, absence d’erreurs JavaScript, chargement des originaux et réversibilité de l’introduction et du pack. Les tests de charte vérifient aussi la langue portugaise, les majuscules, les graisses, l’espacement des titres et les couleurs sémantiques.
 
 **Safari sur un véritable iPhone n’a pas été testé.** Le téléchargement WebKit est bloqué par la politique réseau courante ; les domaines nécessaires figurent aussi dans le brouillon.
 
