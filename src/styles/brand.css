@@ -514,3 +514,87 @@ button:focus-visible {
     position: static;
   }
 }
+/* Real available product photographs accompany each budget line.
+   Service items use original UI symbols, not fabricated product photographs. */
+.order-item {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+}
+.order-item-copy {
+  min-width: 0;
+}
+.order-visual {
+  position: relative;
+  width: 76px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: transparent;
+}
+.order-visual > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px #ffffff12);
+}
+.charger-crop > img {
+  position: absolute;
+  width: 360%;
+  max-width: none;
+  height: auto;
+  left: -115%;
+  top: -130%;
+  object-fit: initial;
+  filter: none;
+}
+.membership-visual {
+  flex-direction: column;
+  gap: 7px;
+}
+.membership-visual > span {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.membership-visual > small {
+  font-size: 8px !important;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  margin: 0;
+  color: var(--whoop-teal);
+}
+.warranty-visual > svg {
+  width: 47px;
+  height: 47px;
+  fill: none;
+  stroke: #e2e7e9;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@media (max-width: 700px) {
+  .order-item {
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+  .order-visual {
+    width: 48px;
+    height: 56px;
+  }
+  .membership-visual > span {
+    font-size: 10px;
+  }
+  .membership-visual > small {
+    font-size: 6px !important;
+  }
+  .warranty-visual > svg {
+    width: 35px;
+    height: 35px;
+  }
+}

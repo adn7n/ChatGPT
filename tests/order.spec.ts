@@ -14,6 +14,12 @@ test("order matches provided screenshot and trader content is removed", async ({
   await expect(page.locator(".people-roster")).toContainText("Michael Phelps");
   await expect(page.locator(".people-roster")).toContainText("Patrick Mahomes");
   await expect(page.locator(".order-item")).toHaveCount(6);
+  await expect(page.locator(".order-visual")).toHaveCount(6);
+  await expect(page.locator(".order-visual img")).toHaveCount(4);
+  await expect(page.locator(".charger-crop img")).toHaveAttribute(
+    "src",
+    "/media/cutouts/whoop-pack.png",
+  );
   await expect(page.locator(".included-price")).toHaveCount(4);
   await expect(page.locator(".order-details")).toContainText("219,00");
   await expect(page.locator(".order-details")).toContainText("48,00");

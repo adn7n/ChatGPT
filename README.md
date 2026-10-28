@@ -70,6 +70,12 @@ Les scènes utilisent désormais des PNG avec canal alpha, sans rectangle de fon
 
 La scène du pack sépare visuellement quatre zones de la photographie avec des masques CSS : bracelet, câble, chargeur et application. Elle est contrôlée par le scroll et réversible. **Elle ne montre pas une décomposition des composants internes.** Le téléphone illustre l’application et n’est pas inclus dans l’achat. Aucune face de capteur n’est inventée. Les photos disponibles ne permettent pas une rotation réelle ; le blanc reçoit un léger mouvement de cadrage et d’inclinaison.
 
+## Vignettes du budget
+
+Chaque ligne dispose maintenant d’un visuel : le bracelet noir et le SportFlex proviennent des détourages existants, le chargeur est cadré dans le vrai visuel du pack, les services d’abonnement et de garantie ont des pictogrammes de présentation. La ligne du capteur utilise temporairement une vue générale du WHOOP, explicitement décrite dans le texte alternatif : aucune fausse face de capteurs n’est fabriquée. Pour reproduire exactement les six vignettes de la capture du panier, sa version PNG/JPG doit être jointe comme fichier (ZIP conseillé) ; elle n’est actuellement disponible que dans le chat.
+
+Les portraits des célébrités ne sont toujours pas intégrés : les domaines Wikimedia et WHOOP restent refusés par la politique réseau active. Le brouillon réseau contient déjà les domaines utiles. Appliquer les paramètres puis publier l’environnement est nécessaire avant de reprendre les téléchargements. Une alternative est de joindre des portraits autorisés dans un ZIP avec leur source et crédit.
+
 ## Limites qui empêchent la livraison complète du brief
 
 La version technique fonctionne, mais la partie photographique et documentaire du brief reste incomplète. Les requêtes vers WHOOP et Unsplash sont refusées par le proxy actif (HTTP 403 « Domain forbidden »). Les domaines utiles sont enregistrés dans le brouillon de configuration, pas appliqués à l’instance. Enregistrer les réglages réseau dans les paramètres, publier l’environnement puis revérifier l’accès avant de reprendre les recherches.

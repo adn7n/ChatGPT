@@ -1,3 +1,4 @@
+import { BudgetVisual } from "../components/BudgetVisual";
 import { Photo } from "../components/Photo";
 import { Label } from "../components/Label";
 import { budget, formatCHF, orderItems } from "../data/budget";
@@ -42,7 +43,8 @@ export function Budget({ assets }: { assets: Assets }) {
           <ul className="order-items">
             {orderItems.map((item) => (
               <li key={item.name} className="order-item reveal">
-                <div>
+                <BudgetVisual kind={item.visual} assets={assets} />
+                <div className="order-item-copy">
                   <p>{item.name}</p>
                   <small>{item.detail} · Qtd. 1</small>
                 </div>
